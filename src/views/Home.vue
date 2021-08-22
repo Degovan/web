@@ -93,36 +93,16 @@
     <div class="lines"></div>
     <br/>
     <div class="wrapper-projects"> 
-     <div class="project-image">
-       300 x 300      
-    </div>
-     <div class="project-image">
-       300 x 300      
-    </div><br/>            
+      <div class="owl-carousel owl-theme">
+        <div class="item-project"></div>
+        <div class="item-project"></div>
+        <div class="item-project"></div>
+        <div class="item-project"></div>
+      </div>
     </div>
   </div>   
     </div> 
   </div><br><br>
-  <section class="conclusion"></section>
-<footer class="footer">
-  <section class="footer-container">
-  <div class="body-footer">
-      <div class="container">
-        <h1>Degovan.</h1>
-        <a href=""><h2>Punya ide, ayo kita bahas</h2></a>
-        <br><br>
-        <a href="">info@degovan.com</a>
-        <div class="menu-footer">
-            <a href="https://intagram.com/degovan.it/"><ion-icon name="logo-instagram"></ion-icon> degovan.it</a>
-            <a href="javascript:void(0)"><ion-icon name="logo-linkedin"></ion-icon> degovan</a>
-            <a href="https://intagram.com/degovan.it/"><ion-icon name="logo-whatsapp"></ion-icon> +685853656272</a>
-        </div>
-        <div class="copyright-footer">
-          <p>&copy; Degovan All Rights Reserved</p>
-        </div>
-      </div>
-    </div>    
-  </section>
-</footer> 
+
 </div>
 </template>

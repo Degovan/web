@@ -18,7 +18,7 @@ yarn build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Dont Forget SASS OR SCSS file compiled 
+### Don't Forget SASS OR SCSS file compiled 
 if you use visual studio code please activate watch scss extension and if you use command prompt
 please follow the steps below:
 
@@ -30,7 +30,6 @@ sass main.scss main.css
 to run sass or scss
 
 ```
-
 sass --watch main.scss main.css
 ```
 

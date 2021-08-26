@@ -1,17 +1,25 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import $ from 'jquery'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import AOS from 'aos';
+import $ from 'jquery';
+import "aos/dist/aos.css";
+import "animate.css";
 // css
 require('./assets/css/main.css');
-require('./assets/css/animate.css');
+// require('./assets/css/animate.css');
 
 Vue.config.productionTip = false
 
+
 new Vue({
+  created(){
+    AOS.init();
+  },
   router,
   render: function (h) { return h(App) }
 }).$mount('#app')
+
 
 
 $(window).on('scroll', function() {
@@ -24,10 +32,32 @@ $(window).on('scroll', function() {
   }
 });
 
-
-  $(".owl-carousel").owlCarousel({
-    items: 1,
+$(window).on("load", function() {
+    // Animate loader off screen
+    $(".preloader").fadeOut("slow");;
   });
+let menu = document.querySelector(".menu");
+  let menuBar = document.querySelector(".menu-bar");
+  menu.addEventListener("click", function(){
+    menuBar.classList.toggle('open');
+    
+    if(menuBar.classList.contains('open')){
+      // document.querySelector("#body").style.overflow = "hidden";
+      menuBar.style.animation = "fadeInRight 0.9s ease";
+      menuBar.style.display = "block";
+    }else{
+      menuBar.style.animation = "fadeOutLeft 0.6s ease";
+      setTimeout(function() {
+      menuBar.style.display = "none";
+      // document.querySelector("#body").style.overflow = "auto";
+      }, 300);
+    }
+  });
+
+
+  // $(".owl-carousel").owlCarousel({
+  //   items: 1,
+  // });
 
 
 

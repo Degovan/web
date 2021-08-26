@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Pricing from '../views/Pricing.vue'
+import About from '../views/About.vue'
 import Project from '../views/Project.vue'
 Vue.use(VueRouter)
 
@@ -13,13 +13,13 @@ const routes = [
     meta: { title: 'Degovan — Jasa Pembuatan Aplikasi dan Website'}
   },
   {
-    path: '/pricing',
-    name: 'Pricing',
-    component: Pricing,
+    path: '/About',
+    name: 'About',
+    component: About,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-     meta: { title: 'Pricing — Degovan'}
+     meta: { title: 'About — Degovan'}
   },
   {
     path: '/project',

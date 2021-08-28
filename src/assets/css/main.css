@@ -13,6 +13,58 @@ body {
   overflow-x: hidden;
 }
 
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 999999;
+}
+.overlay .modal-method-contact {
+  margin-top: 15rem;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  animation: bounceIn 0.4s ease;
+  width: 100%;
+}
+.overlay .modal-method-contact .body-modal {
+  display: flex;
+  gap: 20px;
+}
+.overlay .modal-method-contact .body-modal .btn-contact {
+  background: #f2f2f2;
+  border: none;
+  color: #333;
+  padding: 20px 25px;
+  transition: 0.4s ease;
+  border-radius: 50px;
+  font-size: 30px;
+}
+.overlay .modal-method-contact .body-modal .btn-contact:hover {
+  background: #420FE7;
+  color: #fff;
+}
+.overlay .modal-method-contact .btn-close {
+  padding: 15px 40px;
+  border: none;
+  font-weight: 600;
+  outline: none;
+  border-radius: 50px;
+  font-size: 15px;
+  transition: 0.2s ease;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Quicksand", sans-serif;
+  background: #420FE7;
+  color: #fff;
+}
+
 .preloader {
   width: 100%;
   position: fixed;
@@ -30,6 +82,21 @@ body {
 }
 .preloader b {
   color: #420FE7;
+}
+.preloader .wrapper-progressbar {
+  max-width: 400px;
+  width: 100%;
+}
+.preloader .wrapper-progressbar .progress-bar {
+  width: 100%;
+  background: #dcdcdc;
+}
+.preloader .wrapper-progressbar .progress-bar .bars-progress {
+  width: 5%;
+  transition: 0.4s ease;
+  height: 10px;
+  background: #420FE7;
+  margin-left: 0;
 }
 
 .header {
@@ -328,6 +395,7 @@ button {
   color: grey;
 }
 .box-v3 .container .wrapper-projects .item-carousel img {
+  border-radius: 10px;
   max-width: 400px;
 }
 
@@ -502,7 +570,7 @@ button {
 }
 
 .footer {
-  margin-top: 5rem;
+  margin-top: 4.5rem;
   background: #420FE7;
   padding: 20px;
   box-sizing: border-box;
@@ -599,7 +667,239 @@ button {
   color: #fff;
 }
 
+.svg-wrapper svg {
+  width: 100%;
+  position: absolute;
+  margin-top: -5rem;
+  overflow: visible;
+}
+
+.wave {
+  animation: wave 3s linear;
+  animation-iteration-count: infinite;
+  fill: #420FE7;
+}
+
+.drop {
+  fill: #420FE7;
+  xfill: #99000055;
+  animation: drop 8.2s linear infinite normal;
+  stroke: var(#420FE7);
+  stroke-width: 0.5;
+  transform: translateY(25px);
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+.drop2 {
+  animation-delay: 8s;
+  animation-duration: 8s;
+}
+
+.drop3 {
+  animation-delay: -7s;
+  animation-duration: 8.4s;
+}
+
+.drop4 {
+  animation-delay: 6.7s;
+}
+
+.drop5 {
+  animation-delay: 7.7s;
+  animation-duration: 8.1s;
+}
+
+.drop6 {
+  animation-delay: -7.1s;
+  animation-duration: 8.2s;
+}
+
+.gooeff {
+  filter: url(#goo);
+}
+
+#wave2 {
+  animation-duration: 10s;
+  animation-direction: reverse;
+  opacity: 0.6;
+}
+
+#wave3 {
+  animation-duration: 12s;
+  opacity: 0.3;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(25px);
+  }
+  30% {
+    transform: translateY(-10px) scale(0.1);
+  }
+  30.001% {
+    transform: translateY(25px) scale(1);
+  }
+  70% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(-10px) scale(0.1);
+  }
+}
+@keyframes wave {
+  to {
+    transform: translateX(-100%);
+  }
+}
+.boxab-v1 .wrapper-box-ab-v1 {
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 10rem;
+}
+.boxab-v1 .wrapper-box-ab-v1 h1 {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 70px;
+  margin-left: 0;
+  max-width: 800px;
+  width: 100%;
+}
+.boxab-v1 .wrapper-box-ab-v1 h1 b {
+  color: #420FE7;
+  border-bottom: 3px solid #420FE7;
+}
+.boxab-v1 .wrapper-box-ab-v1 .flex-ab-v1 {
+  display: flex;
+  box-sizing: border-box;
+}
+.boxab-v1 .wrapper-box-ab-v1 .flex-ab-v1 .column-ab-1 {
+  width: 100%;
+  box-sizing: border-box;
+}
+.boxab-v1 .wrapper-box-ab-v1 .flex-ab-v1 .column-ab-1 p {
+  font-size: 20px;
+}
+.boxab-v1 .image-frame-community {
+  height: 40vw;
+  background: url(../image/background/pexels-cottonbro-6804613.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.about {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+.about .container .tool-skill {
+  margin-top: 15rem;
+}
+.about .container .tool-skill .title-box-skill {
+  text-align: center;
+}
+.about .container .tool-skill .title-box-skill h1 {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-size: 30px;
+}
+.about .container .tool-skill .title-box-skill h1 span {
+  transform: translateY(50%);
+}
+.about .container .tool-skill .wrapper-icon-technology .wrapper-icon-brand {
+  box-sizing: border-box;
+}
+.about .container .tool-skill .wrapper-icon-technology .wrapper-icon-brand .item-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 20px;
+}
+.about .container .tool-skill .wrapper-icon-technology .wrapper-icon-brand .item-icon img {
+  max-width: 80px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.projects .boxp-v1 {
+  text-align: center;
+  margin-top: 5rem;
+  padding: 20px;
+}
+.projects .boxp-v1 h1 {
+  color: #333;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.projects .boxp-v1 .lines {
+  margin-top: 10px;
+  width: 100px;
+  height: 3px;
+  background: #420FE7;
+}
+.projects .boxp-v1 img {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#notfoundpage {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  text-align: center;
+}
+#notfoundpage h1 {
+  font-size: 50px;
+}
+#notfoundpage h2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+#notfoundpage lottie-player {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 5rem;
+}
+
 @media only screen and (max-width: 780px) {
+  .boxab-v1 .wrapper-box-ab-v1 {
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 10rem;
+  }
+  .boxab-v1 .wrapper-box-ab-v1 h1 {
+    color: #333;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 28px;
+    margin-left: 0;
+    max-width: 800px;
+    width: 100%;
+  }
+  .boxab-v1 .wrapper-box-ab-v1 .flex-ab-v1 {
+    display: block;
+    box-sizing: border-box;
+  }
+  .boxab-v1 .wrapper-box-ab-v1 .flex-ab-v1 .column-ab-1 {
+    display: block;
+    margin-top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .boxab-v1 .image-frame-community {
+    height: 50vw;
+    background: url(../image/background/pexels-cottonbro-6804613.jpg);
+    background-size: cover;
+  }
+
   .open {
     display: block;
   }
@@ -667,6 +967,9 @@ button {
     margin-top: 2rem;
   }
 
+  .footer {
+    margin-top: 2rem;
+  }
   .footer .footer-wrapper {
     display: block;
   }
@@ -691,26 +994,54 @@ button {
     margin-top: 5rem;
   }
 }
-.projects .boxp-v1 {
-  text-align: center;
-  margin-top: 5rem;
-  padding: 20px;
+@media only screen and (max-width: 582px) and (min-width: 489px) {
+  .footer {
+    margin-top: 0rem;
+  }
 }
-.projects .boxp-v1 h1 {
-  color: #333;
-  font-size: 40px;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
+@media only screen and (max-width: 488px) and (min-width: 444px) {
+  .footer {
+    margin-top: -2rem;
+  }
 }
-.projects .boxp-v1 .lines {
-  margin-top: 10px;
-  width: 100px;
-  height: 3px;
-  background: #420FE7;
+@media only screen and (max-width: 441px) and (min-width: 318px) {
+  .flex-2 .column-flex-2 h1 {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+  }
+  .flex-2 .column-flex-2 h2 {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #420FE7;
+    font-size: 15px;
+  }
+
+  .footer {
+    margin-top: -2rem;
+  }
 }
-.projects .boxp-v1 img {
-  margin-top: 10px;
-  width: 100%;
+@media only screen and (max-width: 374px) and (min-width: 262px) {
+  .flex-2 .column-flex-2 h1 {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+  }
+  .flex-2 .column-flex-2 h2 {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #420FE7;
+    font-size: 15px;
+  }
+
+  .footer {
+    margin-top: -4rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer {
+    margin-top: -4rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

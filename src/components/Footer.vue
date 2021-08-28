@@ -1,4 +1,5 @@
 <template>
+<div class="footer-on-hwad">	
 <div class="footer">
 	<div class="container">
 		<div class="footer-wrapper">
@@ -27,32 +28,34 @@
 			<div class="footer-column" data-aos="fade-right">
 				<h2>Degovan.</h2>
 				<br><br>
-				<a href="#"><ion-icon name="locate-sharp"></ion-icon> <span>Kabupaten Bondowoso, Jawa timur</span></a>
+				<a href="https://goo.gl/maps/m4iE8zMxqahu6Six6"><ion-icon name="locate-sharp"></ion-icon> <span>Kabupaten Bondowoso, Jawa timur</span></a>
 				<br><br>
-				<a href="#"><ion-icon name="call-outline"></ion-icon> <span>+685853656272</span></a>
+				<a href="tel:082139201874"><ion-icon name="call-outline"></ion-icon> <span>+6285853656272</span></a>
 				<br><br>
-				<a href="#"><ion-icon name="mail-sharp"></ion-icon> <span>customercare@degovan.com</span></a>
+				<a href="mailto:costumercare@degovan.com"><ion-icon name="mail-sharp"></ion-icon> <span>customercare@degovan.com</span></a>
 			</div>
 			<div class="footer-column" data-aos="fade-right">
 				<h3>MENU</h3>
 				<br><br>
-				<a href="#"><span>Apa yang kami lakukan?</span></a>
+				<a href="/what-we-do"><ion-icon name="radio-button-on-outline"></ion-icon> <span>Apa yang kami lakukan?</span></a>
 				<br><br>
-				<a href="#"><span>Tentang</span></a>
+				<a href="/about"><ion-icon name="radio-button-on-outline"></ion-icon> <span>Tentang</span></a>
 				<br><br>
-				<a href="#"><span>Project</span></a>
+				<a href="/project"><ion-icon name="radio-button-on-outline"></ion-icon> <span>Project</span></a>
 			</div>
 			<div class="footer-column" data-aos="fade-right">
 				<h3>SOCIAL</h3>
 				<br><br>
-				<a href="#"><ion-icon name="logo-linkedin"></ion-icon> <span>degovan</span></a>
+				<a href="javascript:void(0);"><ion-icon name="logo-linkedin"></ion-icon> <span>degovan</span></a>
 				<br><br>
-				<a href="#"><ion-icon name="logo-instagram"></ion-icon><span>@degoavn.it</span></a>
+				<a href="https://instagram.com/degovan.it"><ion-icon name="logo-instagram"></ion-icon><span>@degoavn.it</span></a>
 			</div>
 		</div>
 		<div class="copyright-footer">
 			<p>&copy; Degovan All Rights Reserved</p>
 		</div>
 	</div>
+	<br><br>
+</div>
 </div>
 </template>

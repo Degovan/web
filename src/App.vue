@@ -6,6 +6,9 @@
   </div> -->
   <div class="preloader">
     <h2>DGV<b>.</b></h2>
+    <div class="wrapper-progressbar">
+          <div class="progress-bar"><div class="bars-progress"></div></div>
+    </div>
     <br>
   </div>
   <header class="header" id="header">
@@ -25,12 +28,38 @@
       <div class="menu-bar">
         <div class="menu-wrap">
         <a href="/what-we-do">Apa yang kami lakukan?</a>
-        <a href="/about">Tentang</a>
+        <a href="/about">Tentang kami</a>
         <a href="/project">Project</a>
       </div>
       </div>
     </div>
-  </header><br/>
+  </header>
+    <button class="floating-bar open-overlay">
+    <ion-icon name="chatbox-ellipses-sharp"></ion-icon>
+    </button>
+    <div class="overlay">
+      <div class="modal-method-contact">
+        <h2>Ayo, kita bicarakan</h2>
+        <br><br>
+        <div class="body-modal">
+          <a href="#">
+            <button class="btn-contact"><ion-icon name="call-outline"></ion-icon></button>
+          </a>
+          <a href="#">
+            <button class="btn-contact"><ion-icon name="logo-whatsapp"></ion-icon></button>
+          </a>
+          <a href="#">
+            <button class="btn-contact"><ion-icon name="logo-instagram"></ion-icon></button>
+          </a>
+          <a href="#">
+            <button class="btn-contact"><ion-icon name="mail-sharp"></ion-icon></button>
+          </a>
+        </div>
+        <br><br>  
+        <button class="btn-close">Keluar, dari popup</button>
+      </div>
+    </div>
+  <br/>
     <router-view/>
 </div>
 </template>

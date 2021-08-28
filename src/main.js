@@ -2,6 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import AOS from 'aos';
+
+// import Scrollbar from 'smooth-scrollbar';
 import $ from 'jquery';
 import "aos/dist/aos.css";
 import "animate.css";
@@ -15,6 +17,7 @@ Vue.config.productionTip = false
 new Vue({
   created(){
     AOS.init();
+   
   },
   router,
   render: function (h) { return h(App) }
@@ -31,10 +34,17 @@ $(window).on('scroll', function() {
       document.querySelector(".floating-bar").style.display = "none";
   }
 });
+ 
+setTimeout(function() {
+   document.querySelector(".bars-progress").style.width = "50%"; 
+}, 500);
 
 $(window).on("load", function() {
     // Animate loader off screen
-    $(".preloader").fadeOut("slow");;
+     $(".preloader").fadeOut("slow");
+    setTimeout(function() {
+     document.querySelector(".bars-progress").style.width = "100%";
+     }, 1000); 
   });
 let menu = document.querySelector(".menu");
   let menuBar = document.querySelector(".menu-bar");
@@ -54,10 +64,33 @@ let menu = document.querySelector(".menu");
     }
   });
 
+setTimeout(function() {
+  document.querySelector(".info-internet").innerHTML = "Memuat halaman...";
+}, 10000);
+
+
+document.querySelector(".btn-close").addEventListener("click", function(){
+  document.querySelector(".overlay").style.display = "none";
+});
+
+
+document.querySelector(".open-overlay").addEventListener("click", function(){
+  document.querySelector(".overlay").style.display = "block";
+});
+
+
+document.querySelector(".open-modal").addEventListener("click", function(){
+  document.querySelector(".overlay").style.display = "block";
+});
+
+
+
 
   // $(".owl-carousel").owlCarousel({
   //   items: 1,
   // });
+
+
 
 
 

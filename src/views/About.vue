@@ -10,7 +10,9 @@
         </div>
     </div>
     <br><br><br>
-    <div class="image-frame-community" data-aos="fade-left"></div>
+    <section class="section-parallax">
+        <section class="image-frame-community"></section>
+    </section>
      <div class="container">
         <br>
         <div class="wrapper-box-ab-v1">
@@ -31,7 +33,7 @@
       <div class="tool-skill">
         <div class="title-box-skill">
       <h2 data-aos="fade-up">Tools & Skill</h2>
-      <div class="lines"></div>
+      <div class="lines" data-aos="fade-right"></div>
     </div>
       <br><br>
       <div class="wrapper-icon-technology">
@@ -126,21 +128,27 @@
 <script>
 import gsap from 'gsap';
 import Footer from '../components/Footer.vue'
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Draggable from "gsap/Draggable";
+gsap.registerPlugin(ScrollTrigger, Draggable); 
 export default {
     components: { 
       Footer
     },
 }
-let tl = gsap.timeline({
-  defaults: {
-    ease: "SlowMo.easeOut",
-  }}
+gsap.utils.toArray(".section-parallax .image-frame-community").forEach((section, i) => {
+          const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
 
-);
-tl.to("#animate-split", {
-  y:'0%',
-  duration:0.7,
-  stragger:0.2
-    }
-);
+      gsap.fromTo(section,{ 
+        y: -heightDiff
+      }, {
+        scrollTrigger: {
+          trigger: section.parentElement,
+          scrub: true,
+           invalidateOnRefresh: true
+        },
+        y: 0,
+        ease: "none"
+      });
+    });
 </script>

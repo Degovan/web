@@ -7,7 +7,7 @@
         <div class="column-body">
            <h2>Konsultasi <b>Ide</b> Anda Bersama <b>Spesialis</b> kami.</h2><br/>
            <p>Kami bersedia untuk mewujudkan ide dengan developer spesialis dari tim kami.</p><br/>
-           <button class="btn btn-radius open-modal btn-primary">Ayo, kita bicarakan!</button><router-link to="/project"><button class="btn btn-radius btn-default right-button">Lihat Project</button></router-link>
+           <button id="openModal" class="btn btn-radius btn-primary">Ayo, kita bicarakan!</button><router-link to="/project"><button class="btn btn-radius btn-default right-button">Lihat Project</button></router-link>
         </div>
       </div>
       <div class="column-flex-1">

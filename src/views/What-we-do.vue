@@ -1,5 +1,10 @@
 <template>
 	<div class="whatwedo">
-		<h1>Coming Soon</h1>
+		<div class="container">
+		<div class="coming-soon">
+			<h1>Coming Soon</h1>
+		<p>Maaf page ini belum selesai, masih dikembangkan :(</p>
+		</div>
+	</div>
 	</div>
 </template>

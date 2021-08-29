@@ -39,13 +39,30 @@ setTimeout(function() {
    document.querySelector(".bars-progress").style.width = "50%"; 
 }, 500);
 
-$(window).on("load", function() {
-    // Animate loader off screen
-     $(".preloader").fadeOut("slow");
-    setTimeout(function() {
-     document.querySelector(".bars-progress").style.width = "100%";
-     }, 1000); 
+// $(window).on("load", function() {
+//     // Animate loader off screen
+//      $(".preloader").fadeOut("slow");
+//     setTimeout(function() {
+//      document.querySelector(".bars-progress").style.width = "100%";
+//      }, 1000); 
+//   });
+
+$(document).on('change','.up', function(){
+        var names = [];
+        var length = $(this).get(0).files.length;
+          for (var i = 0; i < $(this).get(0).files.length; ++i) {
+              names.push($(this).get(0).files[i].name);
+          }
+          // $("input[name=file]").val(names);
+        if(length>2){
+          var fileName = names.join(', ');
+          $(this).closest('.input-box').find('.form-control').attr("value",length+" files selected");
+        }
+        else{
+          $(this).closest('.input-box').find('.form-control').attr("value",names);
+        }
   });
+
 let menu = document.querySelector(".menu");
   let menuBar = document.querySelector(".menu-bar");
   menu.addEventListener("click", function(){
@@ -64,22 +81,34 @@ let menu = document.querySelector(".menu");
     }
   });
 
-setTimeout(function() {
-  document.querySelector(".info-internet").innerHTML = "Memuat halaman...";
-}, 10000);
+  let openOverlay = document.querySelector(".open-modal");
+
+  let overlay = document.querySelector(".overlay");
+  openOverlay.addEventListener("click", function(){
+      document.body.style.overflow = "hidden";
+      // document.querySelector("#body").style.overflow = "hidden";
+      overlay.style.animation = "slideInRight 0.5s ease";
+      overlay.style.display = "block";
+
+    });
 
 
-document.querySelector(".btn-close").addEventListener("click", function(){
-  document.querySelector(".overlay").style.display = "none";
-});
+let closeOverlay = document.querySelector(".close-modal");
+ closeOverlay.addEventListener("click", function(){
+    document.body.style.overflow = "auto";
+      overlay.style.animation = "slideOutRight 0.6s ease";
+      setTimeout(function() {
+      overlay.style.display = "none";
+      // document.querySelector("#body").style.overflow = "auto";
+      }, 300);
+    });
+
+// document.querySelector(".btn-close").addEventListener("click", function(){
+//   document.querySelector(".overlay").style.display = "none";
+// });
 
 
 document.querySelector(".open-overlay").addEventListener("click", function(){
-  document.querySelector(".overlay").style.display = "block";
-});
-
-
-document.querySelector(".open-modal").addEventListener("click", function(){
   document.querySelector(".overlay").style.display = "block";
 });
 

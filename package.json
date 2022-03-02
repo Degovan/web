@@ -1,24 +1,30 @@
 {
-  "name": "degovan-web",
+  "name": "degovan",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "sitemap": "vue-cli-service sitemap"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "esm": "^3.2.25",
     "gsap": "^3.7.1",
     "jquery": "^3.6.0",
+    "nodemailer": "^6.7.2",
     "smooth-scrollbar": "^8.6.3",
     "vue": "^2.6.11",
+    "vue-cli-plugin-sitemap": "~2.3.0",
     "vue-owl-carousel": "^2.0.3",
+    "vue-progressbar": "^0.7.5",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "license": "MIT"
 }

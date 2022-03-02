@@ -3,7 +3,7 @@
 
 [logo]: https://avatars.githubusercontent.com/u/74700238?s=200&v=4 "Logo Degovan"
 
-# degovan-web
+# Degovan landing page
 
 ## Project setup
 ```

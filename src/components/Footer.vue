@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-on-hwad">
+  <div class="footer-on-head">
     <div class="footer">
       <div class="container">
         <div class="footer-wrapper">
@@ -88,5 +88,5 @@
 </template>
 
 <script>
-export default {};
+  export default {};
 </script>

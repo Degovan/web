@@ -58,7 +58,7 @@ body {
   animation: slideUp 0.5s ease-in-out;
 }
 #event .box-v1 .flex {
-  display: flex;
+  display: block;
 }
 @media only screen and (max-width: 699px) and (min-width: 320px) {
   #event .box-v1 .flex {
@@ -109,6 +109,21 @@ body {
   box-sizing: border-box;
 }
 #event .box-v1 .flex .flex-col .flex-form input:focus {
+  background-color: rgba(66, 15, 231, 0.1);
+}
+#event .box-v1 .flex .flex-col .flex-form #textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 300px;
+  resize: none;
+  border-radius: 4px;
+  outline-color: rgba(66, 15, 231, 0.5);
+  margin-top: 1rem;
+  border: 1px solid #dcdcdc;
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+}
+#event .box-v1 .flex .flex-col .flex-form #textarea:focus {
   background-color: rgba(66, 15, 231, 0.1);
 }
 #event .box-v1 .flex .flex-col .file-list {
@@ -295,7 +310,7 @@ body {
 }
 
 .header {
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   position: fixed;
   transition: 0.3s ease;
@@ -318,7 +333,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .title-brand h1 {
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   color: #333;
 }
@@ -328,11 +343,13 @@ body {
 
 .menu-bar {
   float: right;
-  margin-top: -2rem;
+  margin-top: -1.5rem;
 }
 
 a {
   text-decoration: none;
+  font-size: 14px;
+  color: grey;
 }
 
 .router-link-active {
@@ -735,6 +752,10 @@ button {
   --nums: 9;
 }
 
+#footer-on-head {
+  margin-top: 5rem;
+}
+
 .footer {
   margin-top: 4.5rem;
   background: #420fe7;
@@ -917,6 +938,9 @@ button {
   to {
     transform: translateX(-100%);
   }
+}
+.boxab-v1 {
+  animation: slideUp 0.5s ease-in-out;
 }
 .boxab-v1 .wrapper-box-ab-v1 {
   color: #333;

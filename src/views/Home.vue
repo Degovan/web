@@ -264,12 +264,12 @@
 <style scoped></style>
 
 <script>
-import carousel from "vue-owl-carousel";
-import Footer from "../components/Footer.vue";
-export default {
-  components: {
-    carousel,
-    Footer,
-  },
-};
+  import carousel from "vue-owl-carousel";
+  import Footer from "../components/Footer.vue";
+  export default {
+    components: {
+      carousel,
+      Footer,
+    },
+  };
 </script>

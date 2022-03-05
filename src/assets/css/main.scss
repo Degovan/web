@@ -62,7 +62,7 @@ body {
   .box-v1 {
     animation: slideUp 0.5s ease-in-out;
     .flex {
-      display: flex;
+      display: block;
       @include mobile {
         display: table;
       }
@@ -103,6 +103,21 @@ body {
             width: 100%;
             outline-color: rgba(66, 15, 231, 0.5);
             box-sizing: border-box;
+            &:focus {
+              background-color: rgba(66, 15, 231, 0.1);
+            }
+          }
+          #textarea {
+            width: 100%;
+            box-sizing: border-box;
+            height: 300px;
+            resize: none;
+            border-radius: 4px;
+            outline-color: rgba(66, 15, 231, 0.5);
+            margin-top: 1rem;
+            border: 1px solid #dcdcdc;
+            font-family: "Poppins", sans-serif;
+            padding: 8px;
             &:focus {
               background-color: rgba(66, 15, 231, 0.1);
             }
@@ -298,7 +313,7 @@ body {
   }
 }
 .header {
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   position: fixed;
   transition: 0.3s ease;
@@ -318,7 +333,7 @@ body {
   -webkit-font-smoothing: antialiased;
 
   h1 {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     color: $darken;
   }
@@ -329,11 +344,13 @@ body {
 
 .menu-bar {
   float: right;
-  margin-top: -2rem;
+  margin-top: -1.5rem;
 }
 
 a {
   text-decoration: none;
+  font-size: 14px;
+  color: grey;
 }
 
 .router-link-active {
@@ -773,7 +790,9 @@ button {
 // 		}
 // 	}
 // }
-
+#footer-on-head {
+  margin-top: 5rem;
+}
 .footer {
   margin-top: 4.5rem;
   background: $primary;
@@ -953,6 +972,7 @@ button {
 //  about
 
 .boxab-v1 {
+  animation: slideUp 0.5s ease-in-out;
   .wrapper-box-ab-v1 {
     color: #333;
     font-family: "Poppins", sans-serif;

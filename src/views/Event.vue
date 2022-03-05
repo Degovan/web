@@ -44,11 +44,17 @@
                 <p>Alamat <span class="optional">*</span></p>
                 <input type="text" autocomplete="off" />
                 <br /><br />
-                <p>Filosofi logo <span class="optional">*</span></p>
-                <input type="text" autocomplete="off" />
-                <br /><br />
                 <p>Instagram <span class="optional">*</span></p>
                 <input type="text" autocomplete="off" />
+                <br /><br />
+                <p>Filosofi logo <span class="optional">*</span></p>
+                <textarea
+                  name=""
+                  id="textarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="tulis disini..."
+                ></textarea>
                 <br /><br />
                 <label for="fileupload">
                   <span type="button" class="file-text">
